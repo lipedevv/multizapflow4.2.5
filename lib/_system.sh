@@ -14,13 +14,15 @@ system_create_user() {
 
   sleep 2
 
-  sudo su - root <<EOF
-  useradd -m -p $(openssl passwd -crypt ${mysql_root_password}) -s /bin/bash -G sudo deploy
-  usermod -aG sudo deploy
-EOF
+  # cria o usuário sem senha
+  sudo useradd -m -s /bin/bash -G sudo deploy
+
+  # define a senha corretamente
+  echo "deploy:${mysql_root_password}" | sudo chpasswd
 
   sleep 2
 }
+
 
 #######################################
 # garante unzip instalado (idempotente)
