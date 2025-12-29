@@ -100,6 +100,8 @@ FRONTEND_URL=${frontend_url}
 PROXY_PORT=443
 PORT=${backend_port}
 
+GOOGLE_CLIENT_ID=1061937616518-0vfj67qbb3fip59bqieuisg05ip10gnd.apps.googleusercontent.com
+
 DB_HOST=localhost
 DB_DIALECT=postgres
 DB_USER=${instancia_add}
