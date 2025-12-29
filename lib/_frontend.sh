@@ -162,15 +162,13 @@ sudo su - deploy << EOF
   cat <<[-]EOF > /home/deploy/${instancia_add}/frontend/.env
 REACT_APP_BACKEND_URL=${backend_url}
 REACT_APP_HOURS_CLOSE_TICKETS_AUTO=24
-
-GOOGLE_CLIENT_ID=1061937616518-0vfj67qbb3fip59bqieuisg05ip10gnd.apps.googleusercontent.com
-
 REACT_APP_BACKEND_PROTOCOL=https
 REACT_APP_BACKEND_HOST=URL_BACKEND
 REACT_APP_BACKEND_PORT=443
 REACT_APP_LOCALE=pt-br
 REACT_APP_TIMEZONE=America/Sao_Paulo
 REACT_APP_NUMBER_SUPPORT=55XXXXXXXXXXX
+REACT_APP_GOOGLE_CLIENT_ID=1061937616518-0vfj67qbb3fip59bqieuisg05ip10gnd.apps.googleusercontent.com
 
 CERTIFICADOS=false
 HTTPS=false
